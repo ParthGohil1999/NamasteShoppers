@@ -1,0 +1,115 @@
+.paymentContainer {
+  display: grid;
+  place-items: center;
+  background-color: #121218;
+  height: 100%;
+  /* margin: 2vmax; */
+}
+
+.paymentForm {
+  padding: 0 2vmax;
+  background: #0b0b1300;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 400px;
+  height: 65vh;
+  /* min-height: 600px; */
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 3px 5px 13px 1px rgba(5, 6, 12, 0.801);
+  margin-bottom: 10rem;
+}
+
+.paymentForm > p {
+  font: 300 22px "Roboto";
+  color: rgba(255, 255, 255, 0.534);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.534);
+  padding: 25px 0;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.paymentForm > div {
+  display: flex;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.paymentInput {
+  padding: 20px 55px;
+  padding-right: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(24, 24, 24);
+  border-radius: 4px;
+  outline: none;
+}
+
+.paymentInput:hover {
+  padding: 20px 55px;
+  padding-right: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid white;
+  /* color: grey; */
+  border-radius: 4px;
+  outline: none;
+}
+
+.paymentForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.534);
+}
+
+.paymentFormBtn {
+  border: none;
+  background-color: #0077ffa2;
+  color: white;
+  font: 300 18px "Roboto";
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+  border-radius: 5px;
+  height: 55px;
+}
+
+.paymentFormBtn:hover {
+  background-color: #0077ff;
+}
+
+h5{
+  color: grey;
+  margin-top: 25px;
+  text-align: center;
+  font: 100 12px "Roboto";
+}
+
+@media screen and (max-width: 600px) {
+  .paymentForm {
+    width: 90%;
+    height: 65vh;
+  }
+
+  .paymentForm > p {
+    font: 300 22px "Roboto";
+    color: rgba(255, 255, 255, 0.534);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.534);
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .paymentForm > div > svg {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  .paymentFormBtn {
+    font: 300 20px "Roboto";
+    padding: 15px;
+  }
+}

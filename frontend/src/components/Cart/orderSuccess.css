@@ -1,0 +1,51 @@
+.orderSuccess {
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121218;
+  }
+  .orderSuccess > svg {
+    font-size: 80px;
+    margin-bottom: 2vmax;
+    color: green;
+  }
+  .orderSuccess > p {
+    font-size: 30px;
+    color: whitesmoke;
+    padding: 0 30px;
+  }
+  .orderSuccess > a {
+    background-color: #0077ffa2;
+    color: white;
+    border: none;
+    padding: 16px 33px;
+    cursor: pointer;
+    font: 200 23px "Roboto";
+    text-decoration: none;
+    margin: 2vmax;
+    border-radius: 4px;
+  }
+
+  .orderSuccess > a:hover {
+    background-color: #0077ff;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .orderSuccess > a {
+      padding: 3vw 6vw;
+      font: 400 4vw "Roboto";
+      margin: 2vmax;
+    }
+  
+    .orderSuccess > svg {
+      font-size: 80px;
+    }
+    .orderSuccess > p {
+      margin: 2vmax;
+      font-size: 5vw;
+    }
+  }

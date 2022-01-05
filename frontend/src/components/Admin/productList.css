@@ -1,0 +1,99 @@
+/* body{
+  overflow: auto;
+} */
+
+.productListContainer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #13151f;
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
+  
+  #productListHeading {
+    font: 400 2rem "Roboto";
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: #6a88e7;
+    transition: all 0.5s;
+    margin: 3.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .productListTable {
+    padding: 1vw 2vw 0 2vw;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: none !important;
+    background-color: rgba(26, 31, 43, 0.932);
+    width: 80vw;
+    overflow: hidden;
+  }
+  
+  .productListTable div {
+    font: 300 1vmax "Roboto";
+    color: rgba(255, 255, 255, 0.692);
+    border: none !important;
+  }
+  
+  .productListTable a {
+    color: #6a88e7;;
+    transition: all 0.5s;
+    width: 50px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 10px; */
+    border-radius: 7px;
+  }
+
+  .productListTable button {
+    color: rgba(248, 69, 69, 0.63);;
+    transition: all 0.5s;
+    /* width: 10px; */
+    
+  }
+  
+  .productListTable a:hover {
+    color: #6a88e7;
+    background: #6a87e738;
+  }
+  
+  .productListTable button:hover {
+    width: 1%;
+    background: rgba(236, 30, 30, 0.274);
+  }
+  
+  .MuiDataGrid-columnHeader div {
+    color: rgb(255, 255, 255);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .productListTable div {
+      font: 300 4vw "Roboto";
+    }
+
+    .productListTable {
+      width: 85vw;
+    }
+
+    #productListHeading {
+        font: 500 30px "Roboto";
+        padding: 0.5vmax;
+        box-sizing: border-box;
+        color: #6a88e7;
+        transition: all 0.5s;
+        margin: 3.5rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+  }

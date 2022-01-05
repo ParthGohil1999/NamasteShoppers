@@ -1,0 +1,77 @@
+.sidebar {
+  background-color: #121218;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.sidebar > a:first-child {
+  /* padding: 0; */
+  margin-top: 7rem;
+}
+
+
+.sidebar > a > img {
+  margin: 5rem 0 0 1.5rem;
+  width: 70px;
+  height: 50px;
+  transition: all 0.5s;
+}
+
+/* .sidebar > a > span {
+  font: 600 20px "Roboto";
+  color: grey;
+  margin-bottom: 100px;
+} */
+
+.sidebar > a > img:hover {
+  filter: drop-shadow(0 0 10px #6a88e7);
+}
+.sidebar a {
+    /* margin-top: 5rem; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #6a88e7;
+  font: 600 1.5vh "Roboto";
+  padding: 1rem;
+  margin: 1rem auto;
+  transition: all 0.5s;
+  /* border: 1px solid #6a88e7; */
+  background-color: #6a87e717;
+  width: 50%;
+  
+}
+.sidebar a:hover {
+  color: white;
+  /* transform: scale(1.1); */
+  border: none;
+  background-color: #6a87e717;
+}
+
+.sidebar a > P {
+  display: flex;
+  align-items: center;
+}
+.sidebar a > p > svg {
+  margin-right: 0.5rem;
+}
+
+.MuiTypography-root {
+    background-color: transparent !important;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        height: 56vh;
+      }
+
+      .sidebar > a:first-child {
+        /* padding: 0; */
+        margin-top: 3rem;
+      }
+
+}

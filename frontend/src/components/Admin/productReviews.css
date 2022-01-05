@@ -1,0 +1,95 @@
+.productReviewsContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #13151f;
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  height: 100vh;
+}
+
+.productReviewsForm {
+  border-radius: 7px;
+  width: 76vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  padding: 0 2vmax;
+  /* background-color: rgba(197, 10, 10, 0.096); */
+  background-color: #6a87e717;
+}
+
+.productReviewsForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 2rem 2rem 2rem 0;
+}
+.productReviewsForm > div > input {
+  padding: 18px 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  background-color: transparent;
+  border-radius: 4px;
+  font: 300 20px "Roboto";
+  outline: none;
+  color: grey;
+}
+
+.productReviewsForm > div > input:hover {
+  border: 1px solid grey;
+  background-color: transparent;
+  border-radius: 4px;
+  outline: none;
+  color: white;
+}
+
+.productReviewsForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 2vw;
+  color: #6a88e7;
+}
+
+.searchReviewsBtn{
+    width: 10rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .productReviewsContainer {
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
+  }
+  .productReviewsForm {
+    border-radius: 7px;
+    width: 76vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 3vmax;
+    background-color: #6a87e717;
+  }
+
+  .productReviewsForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 20px "Roboto";
+    margin: 0;
+  }
+
+  .productReviewsForm > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+
+  .productReviewsForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .searchReviewsBtn{
+    width: 100% !important;
+}
+}
