@@ -26,6 +26,21 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
   });
 
   sendToken(user, 201, res);
+  const message = `Welcome ${name} to NamasteShoppers!!`;
+
+  try {
+    await sendEmail({
+      email: user.email,
+      subject: "Welcome to NamasteShoppers",
+      message: message,
+    });
+    res.status(200).json({
+      success: true,
+      message: `Welcome ${name} to NamasteShoppers`,
+    });
+  } catch (error) {
+    return next(new ErrorHander(error.message, 500));
+  }
 });
 
 // Login user
@@ -77,7 +92,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
 
   const resetPasswordUrl = `${req.protocol}s://${req.get(
     "host"
-  )}/api/v1/password/reset/${resetToken}`;
+  )}/password/reset/${resetToken}`;
 
   const message = `Your password reset token is :- \n\n${resetPasswordUrl} \n\nIf you have not requested this email then please ignore it`;
 
