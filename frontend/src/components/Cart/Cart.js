@@ -53,13 +53,12 @@ const Cart = ({ history }) => {
             <div className="cartHeader">
               <p>Product</p>
               <p>Quantity</p>
-              <p>Subtotal</p>
             </div>
 
             {cartItems &&
               cartItems.map((item) => (
                 <div className="cartContainer" key={item.product}>
-                  <CartItemCard item={item} deleteCartItems={deleteCartItems} />
+                  <CartItemCard className="CartItemCard" item={item} deleteCartItems={deleteCartItems} />
                   <div className="cartInput">
                     <button
                       onClick={() =>
@@ -81,9 +80,6 @@ const Cart = ({ history }) => {
                       +
                     </button>
                   </div>
-                  <p className="cartSubtotal">{`₹${
-                    item.price * item.quantity
-                  }`}</p>
                 </div>
               ))}
 

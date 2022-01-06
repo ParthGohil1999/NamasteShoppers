@@ -7,6 +7,7 @@ import {
   getProductDetails,
   newReview,
 } from "../../actions/productAction";
+// import user
 import ReviewCard from "./ReviewCard.js";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
@@ -33,6 +34,8 @@ const ProductDetails = ({ match }) => {
   const { success, error: reviewError } = useSelector(
     (state) => state.newReview
   );
+
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   const options = {
     size: "large",
@@ -61,8 +64,13 @@ const ProductDetails = ({ match }) => {
   };
 
   const addToCartHandler = () => {
-    dispatch(addItemsToCart(match.params.id, quantity));
+    if (isAuthenticated === true) {
+      dispatch(addItemsToCart(match.params.id, quantity));
     alert.success("Item Added To Cart");
+    } else {
+      alert.error("Please login to add in cart");
+    }
+    
   };
 
   const submitReviewToggle = () => {
@@ -182,8 +190,7 @@ const ProductDetails = ({ match }) => {
                 cols="30"
                 rows="5"
                 value={comment}
-                onChange={(e) => setComment(e.target.value)
-                }
+                onChange={(e) => setComment(e.target.value)}
                 required
               ></textarea>
             </DialogContent>
